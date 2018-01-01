@@ -7,3 +7,6 @@ CSS variables are entities defined by CSS authors that contain specific values t
 
 - Declaring CSS variables
 - Using the CSS variables
+- using js setProperty for CSS variables
+- Understand NodeList data
+
