@@ -43,6 +43,10 @@
       background-size:cover;
       background-position:center;
       flex: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
     }
 
 
@@ -53,10 +57,15 @@
     .panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
 
     .panel > * {
-      border:  1px solid red;
+      
       margin:0;
       width: 100%;
       transition:transform 0.5s;
+      border:  1px solid red;
+      flex:  1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .panel p {
