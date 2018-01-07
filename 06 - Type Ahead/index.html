@@ -23,7 +23,16 @@ const cities = [];
 
 fetch(endpoint)
   .then(blob => blob.json())
-  .then(data => console.log(data));
+  .then(data => cities.push(...data));
+
+
+function findMatches(wordToMatch, cities){
+  return cities.filter( place => {
+    // check for cities that match search
+    return place.city.match(/bos/i)
+  });
+}
+
 // const prom = fetch(endpoint);
 
 // console.log(prom);
