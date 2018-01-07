@@ -1,4 +1,4 @@
-# CSS + JS Clock
+# 02 CSS + JS Clock
 
 Created a JS and CSS Clock using date function
 

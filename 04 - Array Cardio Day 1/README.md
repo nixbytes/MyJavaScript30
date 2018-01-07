@@ -1,4 +1,4 @@
-# Array Cardio Day 1
+# 04 Array Cardio Day 1
 
 [js array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 

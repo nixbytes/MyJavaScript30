@@ -1,4 +1,4 @@
-# JavaScript Drum Kit
+# 01 JavaScript Drum Kit
 
 
 ### basic drum kit with wav files for sound
