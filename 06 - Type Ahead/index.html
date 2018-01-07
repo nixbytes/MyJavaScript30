@@ -29,9 +29,13 @@ fetch(endpoint)
 function findMatches(wordToMatch, cities){
   return cities.filter( place => {
     // check for cities that match search
-    return place.city.match(/bos/i)
+    const regex = new RegExp(wordToMatch,'gi');
+    return place.city.match(regex) || place.state.match(regex);
   });
 }
+
+
+
 
 // const prom = fetch(endpoint);
 
