@@ -14,6 +14,23 @@ function togglePlay() {
   video[method]();
 }
 
+function updateButton() {
+  const icon = this.paused ? '►' : '❚ ❚';
+  console.log(icon);
+  toggle.textContent = icon;
+}
+
+// update
+function handleProgress() {
+  const percent = (video.currentTime / video.duration) * 100;
+  progressBar.style.flexBasis = `${percent}%`;
+}
 
 /* Hook up the event listeners */
 video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+video.addEventListener('timeupdate', handleProgress);
+
+// Add toggle clicl
+toggle.addEventListener('click', togglePlay);
