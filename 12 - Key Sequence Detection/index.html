@@ -7,7 +7,16 @@
 </head>
 <body>
 <script>
-window.addEventListener('keyup',(e) =>{ console.log(e.key)});
+
+const pressed = [];
+const secretcode = 'maxweb';
+
+window.addEventListener('keyup',(e) =>{ console.log(e.key)
+
+pressed.push(e.key);
+console.log(pressed);
+
+});
 
 </script>
 </body>
