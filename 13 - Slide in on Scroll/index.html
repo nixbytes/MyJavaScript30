@@ -71,7 +71,13 @@ function checkSlide(e){
     const imageBottom = sliderImages.offsetTop + sliderImages.height ;
     const isHalfShown = sliderInAt > sliderImages.offsetTop;
     const isNotScrolledPast = window.scrollY < imageBottom;
+    // check values
     console.log(sliderInAt);
+    if(isHalfShown && isNotScrolledPast){
+      sliderImages.classList.add('active');
+    }else{
+      sliderImages.classList.remove('active');
+    }
 
 
   });
