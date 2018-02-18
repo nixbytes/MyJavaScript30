@@ -36,7 +36,7 @@
     <script>
     const addItems = document.querySelector('.add-items');
     const itemsList = document.querySelector('.plates');
-    const items = [];
+    const items = JSON.parse(localStorage.getItem('items')) || [ ];
 
 
     function addItem(e) {
@@ -50,8 +50,10 @@
         };
         items.push(item);
         popluateList(items,itemsList);
+        localStorage.setItem('items',JSON.stringify(items));
         this.reset();
-        console.table(items);
+
+        // console.table(items);
     }
 
     function popluateList(plates = [], platesList) {
@@ -66,6 +68,8 @@
       }).join('');
     }
     addItems.addEventListener('submit', addItem);
+    popluateList(items,itemsList);
+
     </script>
 </body>
 
