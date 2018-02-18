@@ -40,7 +40,9 @@
       done: false
       
     };
-    console.log(item);
+    items.push(item);
+    this.reset();
+    console.table(items);
   }
 addItems.addEventListener('submit',addItem);
 
