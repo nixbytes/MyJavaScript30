@@ -189,6 +189,7 @@
   .map(timeCode =>{
     
     const [min,secs] = timeCode.split(':');
+    return (min * 60)+secs;
     console.log(min,secs);
   
   });
