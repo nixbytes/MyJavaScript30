@@ -188,11 +188,13 @@
   .map(node => node.dataset.time)
   .map(timeCode =>{
     
-    const [min,secs] = timeCode.split(':');
+    const [min,secs] = timeCode.split(':').map(parseFloat);
     return (min * 60)+secs;
     console.log(min,secs);
   
-  });
+  })
+  .reduce((total,videoSeconds) => total+ videoSeconds);
+  
 </script>
 </body>
 </html>
