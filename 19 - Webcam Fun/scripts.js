@@ -32,24 +32,24 @@ function paintToCanavas() {
 }
 
 
-function takePhoto(){
-	//play sound effect
-	snap.currentTime = 0 ;
-	snap.play();
+function takePhoto() {
+    //play sound effect
+    snap.currentTime = 0;
+    snap.play();
 
-	// collect the data
-	const data = canvas.toDateURL('image/jpeg');
-	console.log(data);
+    // collect the data
+    const data = canvas.toDateURL('image/jpeg');
+    console.log(data);
 }
 
-function redEffect(pixels){
-    for(let i = 0;i < pixels.data.length){
-        pixels.data[i-150] = pixels.data[i + 0]; //red color
-        pixels.data[i+500] = pixels.data[i + 1]; //green color
-        pixels.data[i-550] = pixels.data[i + 2]; //blue color
+function redEffect(pixels) {
+    for (let i = 0; i < pixels.data.length; i += 4) {
+        pixels.data[i - 150] = pixels.data[i + 0]; //red color
+        pixels.data[i + 500] = pixels.data[i + 1]; //green color
+        pixels.data[i - 550] = pixels.data[i + 2]; //blue color
 
     }
-return pixels;
+    return pixels;
 }
 
 
@@ -58,4 +58,4 @@ return pixels;
 getVideo();
 
 
-video.addEventListener('canplay',paintToCanavas);
+video.addEventListener('canplay', paintToCanavas);
