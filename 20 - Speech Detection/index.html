@@ -12,6 +12,13 @@
 <script>
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+  const recognition = new SpeechRecognition();
+  recognition.interimResult = true;
+
+  let p = document.createElement('p');
+  const words = document.querySelector('.word');
+
+  words.appendChild(p);
 
 </script>
 
