@@ -31,6 +31,12 @@
     highlight.classList.add('highlight');
     document.body.append(highlight);
 
+    function highlightLink() {
+      const linksCoords = this.getBoundingClientRect();
+      console.log(linksCoords);
+    }
+
+    triggers.forEach(a => a.addEventListener('mouseenter',highlightLink));
   </script>
 </body>
 </html>
