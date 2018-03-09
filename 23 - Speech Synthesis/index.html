@@ -40,11 +40,20 @@
         const stopButton = document.querySelector('#stop');
 
         msg.text = document.querySelector('[name="text"]').vaule;
-        
-        function populateVoice(){
+
+        function populateVoices()
+        {
             voices = this.getVoices();
-            console.log(voices);
+            //console.log(voices);
+
+            voicesDropdown.innerHTML = voices
+            const voiceOptions = voices
+                .map(voice =>
+                    `<option
+            value="${voice.name}">${voice.name}(${voice.lang})</option>`
+                ).join('');
+
         }
 
-    speechSynthesis.addEventListener('voicechanged',populateVoices);
+        speechSynthesis.addEventListener('voicechanged', populateVoices);
     </script>
