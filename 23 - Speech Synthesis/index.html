@@ -55,5 +55,12 @@
 
         }
 
+        function setVoice()
+        {
+            console.log('Change voice');
+
+        }
+
         speechSynthesis.addEventListener('voicechanged', populateVoices);
+        voiceDropdown.addEventListener('change', setVoice);
     </script>
