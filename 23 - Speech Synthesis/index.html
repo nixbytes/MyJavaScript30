@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Speech Synthesis</title>
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'
-        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -41,8 +40,7 @@
 
         msg.text = document.querySelector('[name="text"]').vaule;
 
-        function populateVoices()
-        {
+        function populateVoices() {
             voices = this.getVoices();
             //console.log(voices);
 
@@ -55,16 +53,17 @@
 
         }
 
-        function setVoice()
-        {
-                msg.voice = voices.find(voice => voice.name === this.value);
-                toggle();
+        function setVoice() {
+            msg.voice = voices.find(voice => voice.name === this.value);
+            toggle();
 
         }
-         function toggle(){
-             speechSynthesis.cancel();
-             speechSynthesis.speak(msg);
-         }
+
+        function toggle() {
+            speechSynthesis.cancel();
+            speechSynthesis.speak(msg);
+        }
         speechSynthesis.addEventListener('voicechanged', populateVoices);
         voiceDropdown.addEventListener('change', setVoice);
+
     </script>
