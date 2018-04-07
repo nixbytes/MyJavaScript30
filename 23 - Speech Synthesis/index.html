@@ -48,7 +48,8 @@
             const voiceOptions = voices
                 .map(voice =>
                     `<option
-            value="${voice.name}">${voice.name}(${voice.lang})</option>`
+                        value="${voice.name}">${voice.name}(${voice.lang})
+                    </option>`
                 ).join('');
 
         }
@@ -59,9 +60,12 @@
 
         }
 
-        function toggle() {
+        function toggle(startOver = true) {
             speechSynthesis.cancel();
-            speechSynthesis.speak(msg);
+            if (startOver) {
+                speechSynthesis.speak(msg);
+            }
+
         }
         speechSynthesis.addEventListener('voicechanged', populateVoices);
         voiceDropdown.addEventListener('change', setVoice);
