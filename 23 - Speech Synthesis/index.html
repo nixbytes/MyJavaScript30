@@ -57,7 +57,8 @@
 
         function setVoice()
         {
-            console.log('Change voice');
+                msg.voice = voices.find(voice => voice.name === this.value);
+                toggle();
 
         }
 
