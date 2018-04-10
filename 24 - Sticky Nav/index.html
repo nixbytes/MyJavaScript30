@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sticky Nav</title>
-    <link rel="stylesheet" href="style-START.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -56,9 +56,15 @@
     </div>
 
     <script>
+        const nav = document.querySelector('#main');
+        const topOfNav = nav.offsetTop;
+        
+        function fixNav(){
+            console.log(topoFNav);
+        }    
 
-
-    </script>
+        window.addEventListener('scroll',fixNav);
+</script>
 
 </body>
 
