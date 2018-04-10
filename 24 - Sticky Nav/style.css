@@ -27,9 +27,10 @@ body {
     transition: transform 0.5s;
 }
 
-.fixed-nav .site-wrap{
+.fixed-nav .site-wrap {
     transform: scale(1);
 }
+
 header {
     text-align: center;
     height: 50vh;
@@ -55,9 +56,9 @@ nav {
     z-index: 1;
 }
 
-.fixed-nav nav{
+.fixed-nav nav {
     position: fixed;
-    box-shadow: 0 5px rgb(0,0,0,0,0.1);
+    box-shadow: 0 5px rgb(0, 0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -88,9 +89,10 @@ li.logo a {
     color: black;
 }
 
-.fixed-nav li.logo{
+.fixed-nav li.logo {
     max-width: 500px;
 }
+
 nav a {
     text-decoration: none;
     padding: 20px;
