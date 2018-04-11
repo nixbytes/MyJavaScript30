@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Understanding JavaScript's Capture</title>
+    <meta charset="UTF-8">
+    <title>Understanding JavaScript's Capture</title>
 </head>
+
 <body class="body">
 
-  <div class="one">
-    <div class="two">
-      <div class="three">
-      </div>
+    <div class="one">
+        <div class="two">
+            <div class="three">
+            </div>
+        </div>
     </div>
-  </div>
 
-<style>
-  html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after { box-sizing: inherit; }
+    <style>
+        html {
+            box-sizing: border-box;
+        }
 
-  div {
-    width:100%;
-    padding:100px;
-  }
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
 
-  .one {
-    background: thistle;
-  }
+        div {
+            width: 100%;
+            padding: 100px;
+        }
 
-  .two {
-    background:mistyrose;
-  }
+        .one {
+            background: thistle;
+        }
 
-  .three {
-    background:coral;
-  }
-</style>
+        .two {
+            background: mistyrose;
+        }
 
-<button></button>
-<script>
-const divs = document.querySelectorAll('div');
+        .three {
+            background: coral;
+        }
+    </style>
 
-const button = document.querySelectorAll('button');
-    
-    function logText(e){
-        console.log(this.classList.value);
-//        e.stopPropagation(); 
-        //stop the bubbling
-//    console.log(this);
-    }
-    
-//    document.body.addEventListener('click',logText);
-    divs.forEach(div => div.addEventListener('click',logText,{
-        capture:true,
-        once:true
-    }));
-    
-      button.addEventListener('click', () => {
-    console.log('Click!!!');
-  }, {
-    once: true
-  });
-</script>
+    <button></button>
+    <script>
+        const divs = document.querySelectorAll('div');
+
+        const button = document.querySelectorAll('button');
+
+        function logText(e) {
+            console.log(this.classList.value);
+            //        e.stopPropagation(); 
+            //stop the bubbling
+            //    console.log(this);
+        }
+
+        //    document.body.addEventListener('click',logText);
+        divs.forEach(div => div.addEventListener('click', logText, {
+            capture: true,
+            once: true
+        }));
+
+        button.addEventListener('click', () => {
+            console.log('Click!!!');
+        }, {
+            once: true
+        });
+    </script>
 </body>
 </html>
