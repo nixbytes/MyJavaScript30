@@ -218,9 +218,24 @@
   .button[href*=twitter] { background: #019FE9; }
   .button[href*=facebook] { background: #3B5998; }
   .button[href*=courses] { background: #ffc600; }
+    
 </style>
 
 <script>
+     const triggers = document.querySelectorAll('.cool > li');
+  const background  = document.querySelector('.dropdownBackground');
+  const nav  = document.querySelector('.top');
+     function handleEnter() {
+          console.log("Entering");
+     }
+    
+      function handleLeave() {
+    console.log("Leaving");
+  }
+    
+      triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+  triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+    
 </script>
 
 </body>
