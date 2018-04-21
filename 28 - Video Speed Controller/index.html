@@ -20,7 +20,7 @@
   const video = document.querySelector('.flex');
 
     
-  speed.addEventListener('mousemove',function(e){
+  function handleMove(e){
       const y = e.pageY - this.offsetTop;
       const percent = y / this.offsetHeight;
       
@@ -34,8 +34,9 @@
       video.playbackRate = playbackRate;
       
       console.log(percent);
-  });
+  }
 
+    speed.addEventListener('mousemove',handleMove);
 </script>
 </body>
 </html>
