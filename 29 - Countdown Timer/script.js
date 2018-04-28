@@ -37,15 +37,15 @@ function displayTimeLeft(seconds) {
 
     const remainderSeconds = seconds % 60;
 
-    const display = `${mintues}:${remainderSeconds}`;
+    const display = `${minutes}:${remainderSeconds}`;
 
     timerDisplay.textContent = display;
 
 
-    //     console.log({
-    //         minutes,
-    //         remainderSeconds
-    //     });
+        console.log({
+            minutes,
+            remainderSeconds
+        });
 
 }
 
