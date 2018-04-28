@@ -8,7 +8,7 @@ const buttons = document.querySelectorAll('[data-time]');
 
 function timer(seconds) {
 
-    // clearInterval(countdown);
+    clearInterval(countdown);
 
     const now = Date.now();
 
@@ -54,7 +54,7 @@ function displayTimeLeft(seconds) {
 }
 
 
-function displayEndTime(timestamp){
+function displayEndTime(timestamp) {
 
     const end = new Date(timestamp);
 
@@ -68,12 +68,24 @@ function displayEndTime(timestamp){
 
 }
 
-function startTime(){
+function startTimer() {
 
     const seconds = parseInt(this.dataset.time);
-    
+
     timer(seconds);
 
     // console.log(this.dataset.time);
 
 }
+
+buttons.forEach(button => button.addEventListener('click', startTimer));
+
+document.customForm.addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+    const mins = this.minutes.value;
+
+    console.log(mins);
+
+});
