@@ -36,6 +36,7 @@
   const holes = document.querySelectorAll('.hole');
   const scoreBoard = document.querySelector('.score');
   const moles = document.querySelectorAll('.mole');
+  let lastHole;
 
 function randTime(min, max){
 
@@ -46,6 +47,15 @@ function randomHole(holes){
     //console.log(holes.length);
     const idx = Math.floor(Math.random() * holrd.length);
     const hole = holes[idx];
+
+    if(hole === lastHole){
+        console.log("same mole in the hole");
+        return randomHole(holes);
+    
+    }
+    lastHole = hole;
+
+    return hole;
 
     console.log(log);
 }
