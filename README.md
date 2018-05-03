@@ -25,4 +25,14 @@
 - 20 Speech Detection 	              
 - 21 Geolocation 	                  
 - 22 Follow Along Link Highlighter 	  
-- 23 Speech Synthesis 	              
+- 23 Speech Synthesis
+- 21  Geolocation	
+- 22  Follow Along Link Highlighter	
+- 23  Speech Synthesis	
+- 24  Sticky Nav	finish 
+- 25  Event Capture, Propagation, Bubbling and Once	
+- 26  Stripe Follow Along Nav	
+- 27  Click and Drag
+- 28  Video Speed Controller	
+- 29  Countdown Timer	
+- 30  Whack A Mole
