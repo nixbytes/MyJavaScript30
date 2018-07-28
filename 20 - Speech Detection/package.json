@@ -12,6 +12,8 @@
     "browser-sync": "^2.12.5"
   },
   "dependencies": {
-    "npm": "^5.7.1"
+    "npm": "^5.10.0",
+    "to": "^0.2.9",
+    "upgrade": "^1.1.0"
   }
 }
