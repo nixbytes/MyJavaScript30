@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.12"
   },
   "dependencies": {
-    "npm": "^6.11.3",
+    "npm": "^6.14.7",
     "to": "^0.2.9",
     "upgrade": "^1.1.0"
   }
